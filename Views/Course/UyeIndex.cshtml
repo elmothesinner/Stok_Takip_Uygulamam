@@ -1,0 +1,35 @@
+﻿@using BtkAkademi.Models
+@model Uye 
+
+<div class="text-center">
+    <h1 class="display-4">Zamzuma ithalat Cem Uzan</h1>
+    <h2>Hoşgeldiniz @Model.Uname</h2>
+    <p>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="Index">Ürünler</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="Index">Dümenden Buton</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Çıkışpopup">Ana-Sayfa/Çıkış Yap</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="DepolarUye">Depolar Ve İçerikleri</a>
+
+    </p>
+<table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Kullanıcı Adınız</th>
+                <th>Şifreniz</th>
+                <th>Mail Adresiniz</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>@Model.Uname</td>
+                    <td>@Model.UPass</td>
+                    <td>@Model.UMail</td>
+
+                </tr>
+            
+        </tbody>
+    </table>
+    <p>
+    </p>
+</div>

@@ -1,0 +1,59 @@
+@model IEnumerable<Candidate>
+
+@if (Model.Count() !=-1)
+{
+    <h6 class="display-6">
+        Ürün Listesi
+    </h6>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>SeriNo</th>
+                <th>Fiyat</th>
+                <th>Kayıt Tarihi</th>
+                <th>Bulunduğu Depo</th>
+                <th>Stok durumu</th>
+                <th>Kategori</th>
+                <th>Stok durumu</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Candidate candidate in Model)
+            {
+                <tr>
+                    <td>@candidate.ÜrünAd</td>
+                    <td>@candidate.ÜrünKat</td>
+                    <td>@candidate.ÜrünKayit</td>
+                    <td>@candidate.Ürünfiat</td>
+                    <td>@candidate.Stokdurum</td>
+                    <td>@candidate.SeriNo</td>
+                    <td>@candidate.Depo</td>
+                    <td>@candidate.ApplyAt</td>
+
+
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="alert alert-info">
+        <a class="btn btn-warning" asp-controller="Course" asp-action="Apply">                      Ürün Ekle</a>
+    </div>
+    <div class="alert alert-info">
+         <a href="https://wa.me/905310250260" target="_blank">                      WhatsApp'tan Mesaj Gönder</a>
+    </div>
+
+}
+else
+{
+    <div class="alert alert-info" align="leftside-navigation">
+        Stok Yok Adminle İletişime Geçin
+        <a class="alert-link"></a>
+        <button class="btn btn-primary" href="https://wa.me/905310250260">                          İletişime Geç</button>
+    </div>
+    <div class="alert alert-info">
+         <a href="https://wa.me/905310250260" target="_blank">                              WhatsApp'tan Mesaj Gönder</a>
+    </div>
+}

@@ -1,0 +1,63 @@
+@model Candidate
+
+<div class="display-6">
+        Dümenden katalog
+</div>
+
+<form method="post" asp-action="Apply">
+    <div class="text-danger" asp-validation-summary="All"></div>
+    
+    <div class="form-group my-2">
+        <label asp-for="ÜrünAd">    ÜrünAd</label>
+        <input asp-for="ÜrünAd" class="form-control" />
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="ÜrünKat">   ÜrünKat</label>
+        <input asp-for="ÜrünKat" class="form-control" />
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="ÜrünKayit">  ÜrünKayit</label>
+        <input asp-for="ÜrünKayit" class="form-control" />
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="Ürünfiat">  Ürünfiat</label>
+        <input asp-for="Ürünfiat" class="form-control" />
+    </div>
+    <div class="form-group my-2">
+        <label asp-for="Stokdurum"> Stokdurum</label>
+        <input asp-for="Stokdurum" class="form-control" />
+    </div>
+    <div class="form-group my-2">
+        <label asp-for="SeriNo">    SeriNo</label>
+        <input asp-for="SeriNo" class="form-control" />
+    </div>
+    <div class="form-group my-2">
+        <label asp-for="YeniKategori">  YeniKategori</label>
+        <input asp-for="YeniKategori" class="form-control" />
+    </div>
+
+
+    <fieldset>
+        <legend>Depo Seç</legend>
+        <p>
+            <input id="mvc" type="radio" asp-for="Depo" value="KATKAT" checked />
+            <label>KATKAT</label>
+        </p>
+        <p>
+            <input id="api" type="radio" asp-for="Depo" value="Mobilya" />
+            <label>     Mobilya</label>
+        </p>
+        <p>
+            <input id="api" type="radio" asp-for="Depo" value="Yiyecek" />
+            <label> Yiyecek</label>
+        </p>
+    </fieldset>
+
+    <div>
+        <button class="btn btn-primary" type="submit">Kaydet</button>
+        <a class="btn btn-warning" asp-controller="Home" asp-action="Index">Home</a>
+    </div>
+</form>

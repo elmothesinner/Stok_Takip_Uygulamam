@@ -1,0 +1,42 @@
+@model IEnumerable<Candidate>
+
+@if (Model.Count() > -1)
+{
+    <h6 class="display-6">
+        Applications(@Model.Count())
+    </h6>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Depo</th>
+                <th>DepoLokasyon</th>
+                <th>Kayıt Tarihi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Candidate candidate in Model)
+            {
+                <tr>     
+                    <td>@candidate.Depo</td>
+                    <td>@candidate.DepoLokasyon</td>
+                    <td>@candidate.ApplyAt</td>     
+     
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="alert alert-info">
+        <a class="btn btn-warning" asp-controller="Course" asp-action="Apply">                      Ürün Ekle</a>
+    </div>
+}
+else
+{
+    <div class="alert alert-info" align="leftside-navigation">
+        Stok Yok Adminle İletişime Geçin
+        <a class="alert-link"></a>
+        <button class="btn btn-primary" href="https://wa.me/905310250260">                          İletişime Geç</button>
+    </div>
+    <div class="alert alert-info">
+         <a href="https://wa.me/905310250260" target="_blank">                              WhatsApp'tan Mesaj Gönder</a>
+    </div>
+}

@@ -1,0 +1,25 @@
+@model Admin
+
+<div class="display-6">
+    Admin Giriş
+</div>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">geri dönüş</a>
+
+
+<form method="post" asp-action="Apply">
+    <div class="text-danger" asp-validation-summary="All"></div>
+    <div class="form-group my-2">
+        <label asp-for="adminİsim">Admin Username</label>
+        <input asp-for="adminİsim" class="form-control" />
+    </div>
+    <div class="form-group my-2">
+        <label asp-for="adminPass">Admin Username</label>
+        <input asp-for="adminPass" class="form-control" />
+    </div>
+    <div>
+
+        <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="AdminIndex">admin giriş</a>
+    </div>
+
+
+</form>

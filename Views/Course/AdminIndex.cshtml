@@ -1,0 +1,39 @@
+﻿@using BtkAkademi.Models
+@model Admin 
+
+<div class="text-center">
+    <h1 class="display-4">Zamzuma ithalat Cem Uzan</h1>
+    <h2>Hoşgeldiniz @Model.adminİsim</h2>
+
+    <p>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="Apply">Ürün giriş</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="Indexadmin">Stok Kontrol</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="DepolarAdmın">Depo durum</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="Course" asp-action="DepoKayıt">Depo Kayıt</a>
+
+    </p>
+<table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>admin</th>
+                <th>detay</th>
+                <th>detay</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>@Model.adminİsim</td>
+                    <td>@Model.adminPass</td>
+                    <td>@Model.Email</td>
+
+                </tr>
+            
+        </tbody>
+    </table>
+    <p>
+    </p>
+    <p>        
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Çıkışpopadm">Çıkış Yap</a>
+    </p>
+</div>

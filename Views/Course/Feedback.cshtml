@@ -1,0 +1,18 @@
+@model Candidate
+
+<div>
+    
+    <h3 class="display-4">Stok Eklendi @Model.Ürünnet </h3>
+    <p class="lead">Dümenden Ürün girişi yaptım belki yapmadım <mark>belli olmaz.</mark></p>
+    <p class="lead">dümenden teşekkür ederim</p>
+    <hr />
+    <blockquote class="blockquote">
+        @Model.Depo suna kaydedildi .
+    </blockquote>
+    <p class="text-muted">eklendiği saat @Model.ApplyAt.</p>
+
+    <div class="btn-group">
+        <a class="btn btn-outline-success" asp-action="Index">Dümenden</a>
+        <a class="btn btn-success" asp-action="AdminIndex" asp-controller="Course">dümenden geri dönüş</a>
+    </div>
+</div>
